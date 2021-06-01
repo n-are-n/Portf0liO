@@ -1,5 +1,29 @@
-var date = new Date();
-document.getElementById( 'year' ).innerHTML = date.getFullYear();
+var date = new Date(); // Create date object
+document.getElementById( 'year' ).innerHTML = date.getFullYear(); // Get year of object
+
+let mainNavLinks = document.querySelectorAll( "nav div ul li a" );
+window.addEventListener( "scroll", event =>
+{
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach( link =>
+    {
+        let section = document.querySelector( link.hash );
+
+        if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+        )
+        {
+            link.classList.add( "active" );
+        } else
+        {
+            link.classList.remove( "active" );
+        }
+    } );
+} );
+
+
 /*===== MENU SHOW =====*/
 const showMenu = ( toggleId, navId ) =>
 {

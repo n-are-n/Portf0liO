@@ -1,4 +1,5 @@
 <?php
+
 # Database Connection
 define('Host', 'localhost'); # Server Name
 define('User', 'root'); # User Name

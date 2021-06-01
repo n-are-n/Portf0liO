@@ -142,7 +142,6 @@ img{
             width: 80%;
             height: 100%;
             padding: 2rem;
-            background-color: var(--second-color);
             transition: .5s;
         }
     }
@@ -150,8 +149,8 @@ img{
         margin-bottom: var(--mb-4);
     }
     &__link{
+        color: gray;
         position: relative;
-
         &:hover{
             position: relative;
 
@@ -197,6 +196,7 @@ opacity: 1;
 
 /*=== Show menu ===*/
 .show{
+    background: white;
     right: 0;
 }
 
@@ -559,7 +559,6 @@ opacity: 1;
     .work{
         &__container{
             grid-template-columns: repeat(3,1fr);
-            grid-template-rows: repeat(2, 1fr);
             column-gap: 2rem;
         }
     }
